@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<head>
+
+<style>
+p {
+	color : white;
+}
+
+        h1 {
+
+  
+            font-size: 90px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to right, #f32170,
+                    #ff6b08, #cf23cf, #eedd44);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+
+
+p1 {
+	
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to right, #f32170,
+                    #ff6b08, #cf23cf, #eedd44);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+
+	}
+
+a {
+	            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to right, #f32170,
+                    #ff6b08, #cf23cf, #eedd44);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+}
+
+</style>
+
+<title>Youtube to Text Summarization</title>
+
+
+<link rel="preconnect" href="https://ajax.googleapis.com">
+<link rel="preconnect" href="https://maxcdn.bootstrapcdn.com">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://platform-api.sharethis.com">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="ccadda436b5cc80e97227df6-text/javascript"></script>
+<link rel="stylesheet" href="https://y2mate.is/assets/css/style.css">
+ 
+  <style>
+.wrapper {<!--  ww  w.  j  ava2s  . c  o  m-->
+   height: 100%;
+   width: 100%;
+   left:0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   position: absolute;
+   background: linear-gradient(124deg, #ff2400, #e81d1d, blue, #e3e81d, #1de840, #1ddde8, red, #dd00f3, #dd00f3);
+   background-size: 1800% 1800%;
+   -webkit-animation: rainbow 18s ease infinite;
+   -z-animation: rainbow 18s ease infinite;
+   -o-animation: rainbow 18s ease infinite;
+   animation: rainbow 18s ease infinite;}
+   @-webkit-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+   }
+   @-moz-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+   }
+   @-o-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+   }
+   @keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+   }
+      </style> 
+ </head> 
+
+ <body translate="no"> 
+  <div class="wrapper">
+
+
+
+
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div class="container">
+<div class="navbar-header">
+<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+<span class="sr-only"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a title="Go to Home" class="navbar-brand">
+<span><font color = "#cc0066">Text Summarization</font></span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<section class="custom_container mt-20">
+<div id="video_container" class="text-center video_container_section">
+<div class="row">
+<div class="col-md-12">
+
+<h1 class="intro-h1"><font size = '7'>Youtube to Text Summarization</font></h1>
+</div>
+</div>
+<div class="mt-10">
+<div class="yt-input">
+<div id="divInput" class="text-center">
+
+
+<form action="" method=POST>
+<input id="txtUrl" name="url" type="text" placeholder="Paste Youtube link" autocomplete="off">
+<button type="submit" value="Convert" id="btnSubmit">
+<span class="start-btn">Convert</span>
+<span class="glyphicon glyphicon-arrow-up"></span>
+</button>
+</form>
+
+
+<p1 class="text-center pt-5">Paste the youtube link above </p>
+<div id="imgAnalyzer" style="display: none;"><img alt="video info is loading" src="https://y2mate.is/assets/images/loading2.gif"></div>
+</div>
+</div>
+<div id="result">
+<div class="row">
+<div class="col-md-6 text-center">
+<div id="info">
+<div id="divThumbnail">
+<img id="thumbnail" class="thumnail-img">
+</div>
+<div id="videoTitle" class="text-center"></div>
+</div>
+</div>
+<div class="col-md-6">
+<div id="mytab" style="width: 100%;">
+<div class="tab">
+</div>
+<div id="tabVideo" class="tabcontent"></div>
+<div id="tabAudio" class="tabcontent"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="error" style="display: none;" class="caption text-left"> <div id="error-text" role="alert" class="alert alert-danger text-center"> <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> </div> </div>
+<div id="DownloadTip"></div>
+</div>
+</section>
+<section class="text-section mt-10">
+<div class="col-md-12 text-center">
+<h2 ><font color = "white">Youtube to Text summarization converter</font></h2>
+<p class="intro-text">
+<font size='4'>
+With Youtube to Text summarization converter it's easy to transcribe your YouTube videos online. There's no extra software required- Youtube to Text summarization converter works in your browser. Whether you want to create text transcriptions, or add subtitles, it couldn’t be easier. Youtube to Text summarization converter automatically converts speech to text and you can transcribe your video All automatically. Save your YouTube video transcript as a text file (.txt) and (.WAV) to see accurate video to text and video to audio transcription. Remember you should only be transcribing YouTube videos that you yourself own. Never download copyrighted material and always follow YouTube's terms of service. Happy transcribing!
+</font>
+</p>
+</div>
+</div>
+<hr>
+<div class="row">
+<div class="col-md-7">
+
+
+
+</div>  
+ </body>
+</html>
