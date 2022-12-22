@@ -10,5 +10,8 @@ gpt3 Whisper execution on colab:
 
 
 The working of the current web app - {Video-to-text-conversion-and-summarization}
-https://user-images.githubusercontent.com/76155912/209084707-b5ed1b8b-2b6f-4f6f-8f8c-43fd6ee13e10.mp4
+
+
+https://user-images.githubusercontent.com/76155912/209085819-ec448b54-ce96-478d-acfd-7d21c8838afb.mp4
+
 
